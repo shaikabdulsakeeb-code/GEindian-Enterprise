@@ -1,0 +1,93 @@
+[
+  {
+    "id": "amla-powder",
+    "name": "Amla Powder",
+    "description": "High-quality, natural Amla powder rich in Vitamin C and antioxidants.",
+    "category": "Powders",
+    "image": "/src/assets/images/amla powder.jpeg"
+  },
+  {
+    "id": "banana-powder",
+    "name": "Banana Powder",
+    "description": "Nutrient-rich banana powder perfect for baking and baby food.",
+    "category": "Powders",
+    "image": "/src/assets/images/banana powder.jpeg"
+  },
+  {
+    "id": "coriander-powder",
+    "name": "Coriander Powder",
+    "description": "Aromatic, fresh ground coriander to elevate your culinary dishes.",
+    "category": "Powders",
+    "image": "/src/assets/images/coriander powder.jpg"
+  },
+  {
+    "id": "ginger-powder",
+    "name": "Ginger Powder",
+    "description": "Strong, pungent ginger powder for cooking and herbal remedies.",
+    "category": "Powders",
+    "image": "/src/assets/images/ginger powder.jpg"
+  },
+  {
+    "id": "green-chilli-powder",
+    "name": "Green Chilli Powder",
+    "description": "Spicy and flavorful green chilli powder.",
+    "category": "Powders",
+    "image": "/src/assets/images/green chilli powder.jpg"
+  },
+  {
+    "id": "mango-powder",
+    "name": "Mango Powder",
+    "description": "Tangy and sweet natural mango powder (Amchur).",
+    "category": "Powders",
+    "image": "/src/assets/images/Mango powder.jpeg"
+  },
+  {
+    "id": "tomato-powder",
+    "name": "Tomato Powder",
+    "description": "Rich tomato powder, excellent for soups, sauces, and seasoning.",
+    "category": "Powders",
+    "image": "/src/assets/images/Tomato powder.jpeg"
+  },
+  {
+    "id": "beetroot-powder",
+    "name": "Beetroot Powder",
+    "description": "Vibrant and natural beetroot powder.",
+    "category": "Powders",
+    "image": "/src/assets/images/beetroot powder.jpg"
+  },
+  {
+    "id": "jackfruit-powder",
+    "name": "Jackfruit Powder",
+    "description": "A sweet, tropical flavor naturally derived from Jackfruit.",
+    "category": "Powders",
+    "image": "/src/assets/images/Jackfruit powder.jpeg"
+  },
+  {
+    "id": "moringa-powder",
+    "name": "Moringa Powder",
+    "description": "Nutrient-dense superfood powder packed with vitamins.",
+    "category": "Powders",
+    "image": "/src/assets/images/Moringa powder.jpeg"
+  },
+  {
+    "id": "onion-powder",
+    "name": "Onion Powder",
+    "description": "Essential savory onion powder for all cooking needs.",
+    "category": "Powders",
+    "image": "/src/assets/images/onion powder.jpg"
+  },
+  {
+    "id": "spinach-powder",
+    "name": "Spinach Powder",
+    "description": "Natural green spinach powder for health drinks and baking.",
+    "category": "Powders",
+    "image": "/src/assets/images/spinach powder.jpg"
+  },
+  {
+    "id": "strawberry-powder",
+    "name": "Strawberry Powder",
+    "description": "Sweet, vibrant strawberry powder for desserts and smoothies.",
+    "category": "Powders",
+    "image": "/src/assets/images/strawberry powder.jpeg"
+  }
+]
