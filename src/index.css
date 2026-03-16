@@ -19,8 +19,15 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-slate-50 text-slate-900 transition-colors duration-300 font-sans;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
   }
   
   .dark body {

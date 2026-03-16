@@ -8,7 +8,7 @@ const Certifications = () => {
   return (
     <div className="pt-8 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
       
-      <div className="bg-brand-50 dark:bg-brand-900/10 py-16 mb-16 border-b border-brand-100 dark:border-white/5">
+      <div className="bg-brand-50 dark:bg-brand-900/10 py-10 md:py-16 mb-10 md:mb-16 border-b border-brand-100 dark:border-white/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div 
@@ -51,7 +51,7 @@ const Certifications = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 md:gap-8">
           {certificationsData.map((cert, index) => (
             <motion.div
               key={cert.id}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -13,31 +14,40 @@ const ProductCard = ({ product, onRequestSample }) => {
       {/* Abstract Background blob */}
       <div className="absolute -inset-4 bg-gradient-to-br from-brand-100/40 to-transparent dark:from-brand-900/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
 
-      {/* Image Container */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-dark-900">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-          decoding="async"
-        />
-        <div className="absolute top-3 left-3 bg-white/90 dark:bg-dark-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-slate-800 dark:text-slate-200">
-          {product.category}
+      {/* Clickable Link wrapping image + content */}
+      <Link to={`/products/${product.id}`} className="block">
+        {/* Image Container */}
+        <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-dark-900">
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute top-3 left-3 bg-white/90 dark:bg-dark-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-slate-800 dark:text-slate-200">
+            {product.category}
+          </div>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="font-display font-semibold text-xl text-slate-800 dark:text-white mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
-          {product.name}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2 mb-6">
-          {product.description}
-        </p>
+        {/* Content */}
+        <div className="p-4 sm:p-6">
+          <h3 className="font-display font-semibold text-xl text-slate-800 dark:text-white mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+            {product.name}
+          </h3>
+          <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2 mb-6">
+            {product.description}
+          </p>
+        </div>
+      </Link>
 
+      {/* Request Sample Button — outside the Link so it doesn't navigate */}
+      <div className="px-4 sm:px-6 pb-4 sm:pb-6 -mt-2">
         <button 
-          onClick={() => onRequestSample(product.name)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onRequestSample(product.name);
+          }}
           className="w-full py-2.5 px-4 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-200 dark:bg-dark-900 dark:hover:bg-brand-900/30 dark:border-white/10 text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 font-medium text-sm transition-all flex justify-between items-center group/btn"
         >
           Request Sample

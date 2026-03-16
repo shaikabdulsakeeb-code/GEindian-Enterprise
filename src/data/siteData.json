@@ -8,5 +8,10 @@
   "description": "GE Enterprise is a growing agricultural products company specializing in food powders, vegetables, and export-quality farm goods. We are committed to delivering trusted and high-quality products worldwide.",
   "developerLink": "https://sakeeb-portfolio.netlify.app/",
   "mission": "To provide natural, high-quality agricultural products while supporting farmers and promoting sustainable farming practices.",
-  "vision": "To become a globally recognized exporter of trusted agricultural and food products."
+  "vision": "To become a globally recognized exporter of trusted agricultural and food products.",
+  "socialLinks": {
+    "instagram": "https://instagram.com/geindian",
+    "twitter": "https://twitter.com/geindian",
+    "linkedin": "https://linkedin.com/company/geindian"
+  }
 }

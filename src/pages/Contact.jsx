@@ -43,10 +43,10 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pt-20 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+    <div className="pt-10 md:pt-20 pb-16 md:pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
       <div className="container mx-auto px-4 md:px-6">
         
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const Contact = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Methods */}
           <div className="lg:col-span-2 space-y-6">
             {contactMethods.map((method, i) => (
@@ -93,7 +93,7 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <div className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden">
+            <div className="glass p-5 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl relative overflow-hidden">
                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-400/10 rounded-full blur-3xl -z-10" />
                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-6">Send us a Message</h3>
                

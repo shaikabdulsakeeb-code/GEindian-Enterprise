@@ -24,14 +24,14 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5 dark:bg-dark-900/50'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-2 md:pt-5 md:pb-4' : 'bg-transparent py-3 md:pt-7 md:pb-6 dark:bg-dark-900/50'}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className="overflow-hidden rounded-lg w-10 h-10 group-hover:scale-105 transition-transform duration-300">
-             <img src="/src/assets/images/logo-title.png" alt="GE Enterprise Logo" className="w-full h-full object-cover" />
+             <img src="/images/logo-title.png" alt="GE Enterprise Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="font-display font-bold text-2xl tracking-tight text-slate-900 dark:text-white">
+          <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">
             GE <span className="text-brand-600 dark:text-brand-400">Enterprise</span>
           </span>
         </Link>
@@ -92,7 +92,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) => 
-                    `block px-4 py-2 rounded-lg font-medium transition-colors ${isActive ? 'bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400' : 'text-slate-600 dark:text-slate-300'}`
+                    `block px-4 py-3 rounded-lg font-medium transition-colors text-base ${isActive ? 'bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400' : 'text-slate-600 dark:text-slate-300'}`
                   }
                 >
                   {link.name}

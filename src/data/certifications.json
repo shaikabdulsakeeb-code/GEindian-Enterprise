@@ -2,21 +2,21 @@
   {
     "id": "iec",
     "name": "IEC Certification",
-    "image": "/src/assets/images/certificates/IEC New.pdf"
+    "image": "/images/certificates/IEC New.pdf"
   },
   {
     "id": "apeda",
     "name": "APEDA Approved Certification",
-    "image": "/src/assets/images/certificates/APEDA.pdf"
+    "image": "/images/certificates/APEDA.pdf"
   },
   {
     "id": "gst",
     "name": "GST Certification",
-    "image": "/src/assets/images/certificates/GE GST Reg.pdf"
+    "image": "/images/certificates/GE GST Reg.pdf"
   },
   {
     "id": "fssai",
     "name": "FSSAI Central Licence",
-    "image": "/src/assets/images/certificates/FSSAI LICENCE CENTRAL.pdf"
+    "image": "/images/certificates/FSSAI LICENCE CENTRAL.pdf"
   }
 ]

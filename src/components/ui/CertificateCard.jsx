@@ -6,7 +6,7 @@ export const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -19,7 +19,7 @@ export const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="relative max-w-5xl max-h-[90vh] w-full rounded-xl overflow-hidden shadow-2xl z-10"
+            className="relative max-w-5xl max-h-[85vh] w-full rounded-xl overflow-hidden shadow-2xl z-10"
           >
             <button 
               onClick={onClose}

@@ -3,91 +3,286 @@
     "id": "amla-powder",
     "name": "Amla Powder",
     "description": "High-quality, natural Amla powder rich in Vitamin C and antioxidants.",
+    "longDescription": "Our premium Amla (Indian Gooseberry) powder is carefully sourced from organically grown gooseberries in India. Known as a superfruit in Ayurveda, Amla is one of the richest natural sources of Vitamin C and powerful antioxidants. Our cold-processing technique preserves the full nutritional profile, delivering a fine, aromatic powder that blends seamlessly into your daily routine.",
     "category": "Powders",
-    "image": "/src/assets/images/amla powder.jpeg"
+    "image": "/images/amla powder.jpeg",
+    "benefits": [
+      "Extremely rich in Vitamin C and antioxidants",
+      "Supports a strong immune system",
+      "Promotes healthy, glowing skin and strong hair",
+      "Acts as a natural detoxifier",
+      "Aids in digestion and metabolism"
+    ],
+    "usage": ["Smoothies & juices", "Face masks & hair packs", "Herbal teas", "Baking & cooking", "Dietary supplements"],
+    "specifications": {
+      "Storage": "Cool, dry place away from sunlight",
+      "Origin": "India",
+      "Type": "100% Natural, No additives",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "banana-powder",
     "name": "Banana Powder",
     "description": "Nutrient-rich banana powder perfect for baking and baby food.",
+    "longDescription": "Our Banana Powder is made from carefully selected ripe bananas that are dehydrated and ground into a fine, naturally sweet powder. It retains the full nutritional value of fresh bananas including potassium, dietary fiber, and essential vitamins. This versatile powder is a favorite among bakers, baby food manufacturers, and health-conscious consumers around the world.",
     "category": "Powders",
-    "image": "/src/assets/images/banana powder.jpeg"
+    "image": "/images/banana powder.jpeg",
+    "benefits": [
+      "Excellent source of potassium and dietary fiber",
+      "Natural energy booster",
+      "Perfect natural sweetener for baby food",
+      "Supports heart health and digestion",
+      "Gluten-free and allergen-friendly"
+    ],
+    "usage": ["Baby food formulations", "Smoothies & shakes", "Baking & pastries", "Ice cream & desserts", "Cereal mixes"],
+    "specifications": {
+      "Storage": "Store in an airtight container in a cool, dry place",
+      "Origin": "India",
+      "Type": "100% Natural, No preservatives",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "coriander-powder",
     "name": "Coriander Powder",
     "description": "Aromatic, fresh ground coriander to elevate your culinary dishes.",
+    "longDescription": "Our Coriander Powder is crafted from the finest coriander seeds, gently roasted and stone-ground to preserve their delicate, citrusy aroma and warm flavor. A staple in Indian, Middle Eastern, and Latin cuisines, this powder adds depth and character to curries, soups, and marinades. Each batch is tested for purity and freshness to ensure restaurant-quality results in your kitchen.",
     "category": "Powders",
-    "image": "/src/assets/images/coriander powder.jpg"
+    "image": "/images/coriander powder.jpg",
+    "benefits": [
+      "Rich in dietary fiber and essential minerals",
+      "Helps in digestion and reduces bloating",
+      "Contains iron, magnesium, and manganese",
+      "Natural anti-inflammatory properties",
+      "Enhances flavor without artificial additives"
+    ],
+    "usage": ["Curries & gravies", "Soups & stews", "Marinades & rubs", "Spice blends", "Chutneys & sauces"],
+    "specifications": {
+      "Storage": "Airtight container, cool & dry place",
+      "Origin": "India",
+      "Type": "100% Pure Ground Coriander",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "ginger-powder",
     "name": "Ginger Powder",
     "description": "Strong, pungent ginger powder for cooking and herbal remedies.",
+    "longDescription": "Our Ginger Powder is made from premium-quality sun-dried ginger rhizomes, carefully processed to retain the signature sharp, warming flavor and potent bioactive compounds. Ginger has been a cornerstone of traditional medicine for centuries. Our powder delivers the convenience of year-round use with the full strength of fresh ginger—ideal for both culinary creations and natural wellness routines.",
     "category": "Powders",
-    "image": "/src/assets/images/ginger powder.jpg"
+    "image": "/images/ginger powder.jpg",
+    "benefits": [
+      "Powerful anti-inflammatory and anti-nausea properties",
+      "Boosts immunity and fights infections",
+      "Aids digestion and relieves stomach discomfort",
+      "Rich in gingerol — a potent bioactive compound",
+      "Supports cardiovascular health"
+    ],
+    "usage": ["Teas & warm beverages", "Curries & stir-fries", "Baking (gingerbread, cookies)", "Herbal remedies", "Salad dressings & marinades"],
+    "specifications": {
+      "Storage": "Cool, dry place in a sealed container",
+      "Origin": "India",
+      "Type": "100% Natural Dried Ginger",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "green-chilli-powder",
     "name": "Green Chilli Powder",
     "description": "Spicy and flavorful green chilli powder.",
+    "longDescription": "Our Green Chilli Powder brings the vibrant heat and fresh peppery taste of green chilies in a convenient powder form. Made from select green chilies that are carefully dried at low temperatures and finely ground, this powder preserves the natural color, aroma, and pungency. It's a must-have for adding a clean, sharp heat to any dish without the mess of handling fresh chilies.",
     "category": "Powders",
-    "image": "/src/assets/images/green chilli powder.jpg"
+    "image": "/images/green chilli powder.jpg",
+    "benefits": [
+      "Rich in Vitamin A, C, and capsaicin",
+      "Boosts metabolism and supports weight management",
+      "Natural pain reliever and anti-inflammatory",
+      "Enhances flavor with authentic green chilli heat",
+      "Retains natural color with no artificial dyes"
+    ],
+    "usage": ["Curries & sabzis", "Chutneys & pickles", "Snack seasonings", "Instant noodles & soups", "Marinades"],
+    "specifications": {
+      "Storage": "Cool, dry, dark place",
+      "Origin": "India",
+      "Type": "100% Dehydrated Green Chilli",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "mango-powder",
     "name": "Mango Powder",
     "description": "Tangy and sweet natural mango powder (Amchur).",
+    "longDescription": "Our Mango Powder (Amchur) is prepared from hand-picked raw green mangoes that are sun-dried and stone-ground into a fine, tangy powder. A traditional ingredient in Indian cuisine, Amchur adds a citrusy sourness that brightens curries, chaats, and snacks. Beyond cooking, our mango powder is rich in vitamins and is increasingly used in health foods, smoothies, and supplements.",
     "category": "Powders",
-    "image": "/src/assets/images/Mango powder.jpeg"
+    "image": "/images/Mango powder.jpeg",
+    "benefits": [
+      "Rich in Vitamin A, C, and E",
+      "Aids digestion and improves appetite",
+      "Natural tangy flavor without added acidity",
+      "Supports skin health and glow",
+      "Contains iron and other essential minerals"
+    ],
+    "usage": ["Chaats & street food", "Curries & dals", "Smoothie bowls", "Spice blends & marinades", "Pickles & preserves"],
+    "specifications": {
+      "Storage": "Airtight container, away from moisture",
+      "Origin": "India",
+      "Type": "100% Natural Amchur (Dried Mango)",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "tomato-powder",
     "name": "Tomato Powder",
     "description": "Rich tomato powder, excellent for soups, sauces, and seasoning.",
+    "longDescription": "Our Tomato Powder is made from vine-ripened, deep red tomatoes that are spray-dried to lock in their robust flavor, vibrant color, and full nutritional profile. This versatile ingredient is a kitchen essential for creating instant sauces, flavorful soups, and rich seasoning blends. It packs the concentrated goodness of multiple tomatoes into every spoon, with zero artificial colors or preservatives.",
     "category": "Powders",
-    "image": "/src/assets/images/Tomato powder.jpeg"
+    "image": "/images/Tomato powder.jpeg",
+    "benefits": [
+      "Concentrated source of lycopene — a powerful antioxidant",
+      "Rich in Vitamins A, C, and K",
+      "Supports heart health and skin protection",
+      "Low-calorie, nutrient-dense ingredient",
+      "No artificial colors or preservatives"
+    ],
+    "usage": ["Soups & broths", "Pasta sauces & pizza bases", "Seasoning mixes", "Instant food formulations", "Dips & spreads"],
+    "specifications": {
+      "Storage": "Cool, dry place in sealed packaging",
+      "Origin": "India",
+      "Type": "100% Spray-Dried Tomato",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "beetroot-powder",
     "name": "Beetroot Powder",
     "description": "Vibrant and natural beetroot powder.",
+    "longDescription": "Our Beetroot Powder captures the deep ruby color and earthy sweetness of premium beets. Made through a careful low-temperature drying process, it preserves the naturally occurring nitrates, betalains, and essential nutrients that make beetroot a celebrated superfood. Whether you're an athlete looking for a natural performance enhancer or a chef seeking a stunning natural colorant, this powder delivers.",
     "category": "Powders",
-    "image": "/src/assets/images/beetroot powder.jpg"
+    "image": "/images/beetroot powder.jpg",
+    "benefits": [
+      "Natural source of dietary nitrates for stamina",
+      "Rich in betalains — powerful antioxidants",
+      "Supports healthy blood pressure levels",
+      "Excellent natural food colorant (deep pink/red)",
+      "Boosts energy and athletic performance"
+    ],
+    "usage": ["Pre-workout drinks", "Smoothies & juices", "Natural food coloring", "Pasta & noodle dough", "Face masks & skincare"],
+    "specifications": {
+      "Storage": "Airtight container, cool & dark place",
+      "Origin": "India",
+      "Type": "100% Dehydrated Beetroot",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "jackfruit-powder",
     "name": "Jackfruit Powder",
     "description": "A sweet, tropical flavor naturally derived from Jackfruit.",
+    "longDescription": "Our Jackfruit Powder is crafted from ripe jackfruit pulp harvested from tropical plantations in South India. The fruit is carefully dehydrated and milled into a fine, aromatic powder that retains its signature tropical sweetness and creamy texture notes. Jackfruit is one of the largest tree-borne fruits in the world and is valued for its unique flavor, high fiber content, and versatility in both sweet and savory dishes.",
     "category": "Powders",
-    "image": "/src/assets/images/Jackfruit powder.jpeg"
+    "image": "/images/Jackfruit powder.jpeg",
+    "benefits": [
+      "High in dietary fiber and complex carbohydrates",
+      "Rich in Vitamin A, B6, and potassium",
+      "Natural sweetener with low glycemic index",
+      "Supports gut health and digestion",
+      "Versatile tropical flavor for diverse recipes"
+    ],
+    "usage": ["Smoothies & milkshakes", "Baking & desserts", "Baby food", "Ice cream & yogurt mixes", "Energy bars & snacks"],
+    "specifications": {
+      "Storage": "Cool, dry place, sealed container",
+      "Origin": "South India",
+      "Type": "100% Dehydrated Jackfruit Pulp",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "moringa-powder",
     "name": "Moringa Powder",
     "description": "Nutrient-dense superfood powder packed with vitamins.",
+    "longDescription": "Our Moringa Powder is made from the leaves of the Moringa Oleifera tree, often called the 'Miracle Tree' for its extraordinary nutritional profile. The leaves are shade-dried and stone-ground to preserve over 90 nutrients, 46 antioxidants, and all essential amino acids. Moringa has been used in traditional medicine for thousands of years and is now recognized globally as one of the most nutrient-dense superfoods available.",
     "category": "Powders",
-    "image": "/src/assets/images/Moringa powder.jpeg"
+    "image": "/images/Moringa powder.jpeg",
+    "benefits": [
+      "Contains 7x more Vitamin C than oranges",
+      "4x more calcium than milk",
+      "Rich in iron, protein, and all 9 essential amino acids",
+      "Powerful anti-inflammatory and antioxidant",
+      "Supports energy levels and reduces fatigue"
+    ],
+    "usage": ["Green smoothies & juices", "Health supplements & capsules", "Tea & lattes", "Soups & salads", "Skincare formulations"],
+    "specifications": {
+      "Storage": "Airtight container away from sunlight",
+      "Origin": "India",
+      "Type": "100% Shade-Dried Moringa Leaves",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "onion-powder",
     "name": "Onion Powder",
     "description": "Essential savory onion powder for all cooking needs.",
+    "longDescription": "Our Onion Powder is produced from premium white onions that are cleaned, sliced, dehydrated, and finely milled to create a potent, aromatic powder. It delivers the full savory depth of fresh onions without the tears, peeling, or uneven cooking. An indispensable pantry staple, it dissolves smoothly into sauces, blends perfectly into spice mixes, and adds consistent onion flavor to any recipe.",
     "category": "Powders",
-    "image": "/src/assets/images/onion powder.jpg"
+    "image": "/images/onion powder.jpg",
+    "benefits": [
+      "Rich in quercetin — a powerful flavonoid antioxidant",
+      "Supports immune function and heart health",
+      "Contains prebiotic fiber for gut health",
+      "Adds deep umami flavor to dishes",
+      "Convenient alternative to fresh onions"
+    ],
+    "usage": ["Seasoning mixes & rubs", "Gravies & sauces", "Burger patties & meatballs", "Dips & dressings", "Instant food products"],
+    "specifications": {
+      "Storage": "Cool, dry, airtight container",
+      "Origin": "India",
+      "Type": "100% Dehydrated White Onion",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "spinach-powder",
     "name": "Spinach Powder",
     "description": "Natural green spinach powder for health drinks and baking.",
+    "longDescription": "Our Spinach Powder is made from farm-fresh spinach leaves that are washed, blanched, and carefully dehydrated to lock in their vivid green color and dense nutritional content. Spinach is celebrated as one of the healthiest leafy greens, loaded with iron, calcium, vitamins, and antioxidants. Our powder makes it effortless to add a powerful green boost to your meals, drinks, and beauty routines.",
     "category": "Powders",
-    "image": "/src/assets/images/spinach powder.jpg"
+    "image": "/images/spinach powder.jpg",
+    "benefits": [
+      "Excellent source of iron and calcium",
+      "Rich in Vitamins A, C, K, and folate",
+      "Supports bone health and muscle function",
+      "Natural green food colorant",
+      "Promotes eye health with lutein and zeaxanthin"
+    ],
+    "usage": ["Green smoothies & juices", "Pasta dough & bread", "Soups & curries", "Baby food", "Natural food coloring"],
+    "specifications": {
+      "Storage": "Sealed container, cool & dry place",
+      "Origin": "India",
+      "Type": "100% Dehydrated Spinach Leaves",
+      "Certification": "FSSAI Certified"
+    }
   },
   {
     "id": "strawberry-powder",
     "name": "Strawberry Powder",
     "description": "Sweet, vibrant strawberry powder for desserts and smoothies.",
+    "longDescription": "Our Strawberry Powder is crafted from hand-picked, sun-ripened strawberries that are freeze-dried and gently ground to preserve their irresistible sweetness, bright pink color, and delicate aroma. Every spoonful bursts with the authentic taste of fresh strawberries. This powder is a premium ingredient for confectioneries, bakeries, beverage makers, and anyone who loves adding a natural berry touch to their creations.",
     "category": "Powders",
-    "image": "/src/assets/images/strawberry powder.jpeg"
+    "image": "/images/strawberry powder.jpeg",
+    "benefits": [
+      "High in Vitamin C and manganese",
+      "Rich in antioxidants (anthocyanins and ellagic acid)",
+      "Supports heart health and blood sugar regulation",
+      "Natural pink/red color for food and cosmetics",
+      "Delicious natural flavor with no added sugar"
+    ],
+    "usage": ["Smoothies & milkshakes", "Cakes, cookies & pastries", "Ice cream & frozen desserts", "Yogurt & cereal toppings", "Skincare & lip products"],
+    "specifications": {
+      "Storage": "Cool, dry place in sealed packaging",
+      "Origin": "India",
+      "Type": "100% Freeze-Dried Strawberry",
+      "Certification": "FSSAI Certified"
+    }
   }
 ]

@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Leaf, MapPin, Phone, Mail, ArrowRight, Instagram, X, Linkedin } from 'lucide-react';
 import siteData from '../../data/siteData.json';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-300 pt-10 md:pt-16 pb-8 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12 text-center md:text-left">
           
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2 group mb-4">
+            <Link to="/" className="flex items-center justify-center md:justify-start gap-2 group mb-4">
               <div className="bg-brand-500 p-2 rounded-lg text-white">
                 <Leaf size={24} />
               </div>
@@ -24,6 +24,37 @@ const Footer = () => {
             <p className="text-slate-400 leading-relaxed text-sm">
               {siteData.description}
             </p>
+            
+            {/* Social Links */}
+            <div className="flex items-center justify-center md:justify-start gap-4 pt-4">
+              <a 
+                href={siteData.socialLinks.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a 
+                href={siteData.socialLinks.twitter} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                aria-label="X (formerly Twitter)"
+              >
+                <X size={20} />
+              </a>
+              <a 
+                href={siteData.socialLinks.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

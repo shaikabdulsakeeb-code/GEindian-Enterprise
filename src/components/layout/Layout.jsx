@@ -36,7 +36,7 @@ const Layout = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col pt-[72px] md:pt-[88px]">
+    <div className="min-h-screen flex flex-col pt-[64px] md:pt-[100px]">
       <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       
       <main className="flex-grow">

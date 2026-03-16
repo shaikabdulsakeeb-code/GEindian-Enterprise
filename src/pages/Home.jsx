@@ -13,14 +13,14 @@ const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-dark-900 pt-20">
+    <div className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center bg-slate-50 dark:bg-dark-900 pt-16 md:pt-20 overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-400/30 dark:bg-brand-600/20 rounded-full blur-[120px] mix-blend-multiply animate-blob" />
-      <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-blue-400/20 dark:bg-blue-600/20 rounded-full blur-[120px] mix-blend-multiply animate-blob animation-delay-2000" />
-      <div className="absolute bottom-[-20%] left-[20%] w-[50%] h-[50%] bg-green-300/30 dark:bg-brand-500/20 rounded-full blur-[120px] mix-blend-multiply animate-blob animation-delay-4000" />
+      <div className="absolute top-[-10%] left-[-10%] w-[60%] md:w-[40%] h-[30%] md:h-[40%] bg-brand-400/30 dark:bg-brand-600/20 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply animate-blob" />
+      <div className="absolute top-[20%] right-[-10%] w-[60%] md:w-[40%] h-[30%] md:h-[40%] bg-blue-400/20 dark:bg-blue-600/20 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply animate-blob animation-delay-2000" />
+      <div className="absolute bottom-[-20%] left-[20%] w-[70%] md:w-[50%] h-[30%] md:h-[50%] bg-green-300/30 dark:bg-brand-500/20 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply animate-blob animation-delay-4000" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
           
           <motion.h1 
             style={{ y: y1, opacity }}
-            className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-[1.1]"
+            className="text-4xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight md:leading-[1.1]"
           >
             Growing with Nature, <br />
             <span className="text-gradient">Delivering with Trust.</span>
@@ -84,7 +84,7 @@ const FeaturesSection = () => {
   return (
     <section className="py-20 bg-white dark:bg-dark-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto -mt-32 relative z-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto md:-mt-32 relative z-20">
           {features.map((f, i) => (
             <motion.div 
               key={i}
@@ -124,16 +124,16 @@ const Home = () => {
       <FeaturesSection />
       
       {/* Featured Products */}
-      <section className="py-24 bg-slate-50 dark:bg-dark-900">
+      <section className="py-16 md:py-24 bg-slate-50 dark:bg-dark-900">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-brand-600 dark:text-brand-400 font-medium tracking-wider uppercase text-sm mb-3">Top Rated</h2>
-            <h3 className="font-display font-bold text-3xl md:text-5xl text-slate-900 dark:text-white">
+            <h3 className="font-display font-bold text-2xl md:text-5xl text-slate-900 dark:text-white">
               Popular Products
             </h3>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {featuredProducts.map(product => (
               <ProductCard 
                 key={product.id} 
@@ -156,12 +156,12 @@ const Home = () => {
       </section>
 
       {/* About Section Summary */}
-      <section className="py-24 bg-white dark:bg-dark-800">
+      <section className="py-16 md:py-24 bg-white dark:bg-dark-800">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[2.5rem] relative overflow-hidden text-center shadow-xl">
+          <div className="max-w-4xl mx-auto glass p-6 md:p-16 rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden text-center shadow-xl">
              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-400 to-green-300" />
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mb-6">About GE Enterprise</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            <h2 className="font-display font-bold text-2xl md:text-4xl text-slate-900 dark:text-white mb-6">About GE Enterprise</h2>
+            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
               {siteData.description}
             </p>
             <Link 
