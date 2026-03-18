@@ -2,10 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, ShieldCheck, Users } from 'lucide-react';
 import siteData from '../data/siteData.json';
+import SEO from '../components/common/SEO';
 
 const About = () => {
   return (
     <div className="pt-8 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+      <SEO 
+        title="About Us" 
+        description="Learn more about GEindian, our mission to provide high-quality agricultural products, and our commitment to sustainable farming." 
+      />
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header */}

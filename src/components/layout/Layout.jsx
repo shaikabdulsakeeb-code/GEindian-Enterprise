@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import WhatsAppButton from '../common/WhatsAppButton';
 
 const Layout = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -46,6 +47,7 @@ const Layout = () => {
       </main>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

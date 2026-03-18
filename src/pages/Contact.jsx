@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, Clock } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import siteData from '../data/siteData.json';
+import SEO from '../components/common/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -44,6 +45,10 @@ const Contact = () => {
 
   return (
     <div className="pt-10 md:pt-20 pb-16 md:pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with GEindian for bulk orders, product inquiries, or support. We are here to help with your agricultural needs." 
+      />
       <div className="container mx-auto px-4 md:px-6">
         
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">

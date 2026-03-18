@@ -6,6 +6,7 @@ import ProductCard from '../components/ui/ProductCard';
 import ContactModal from '../components/modals/ContactModal';
 import productsData from '../data/products.json';
 import siteData from '../data/siteData.json';
+import SEO from '../components/common/SEO';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -120,6 +121,10 @@ const Home = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SEO 
+        title="Home" 
+        description="Welcome to GEindian - Your premier destination for high-quality agricultural products, seeds, and expert farming solutions." 
+      />
       <HeroSection />
       <FeaturesSection />
       

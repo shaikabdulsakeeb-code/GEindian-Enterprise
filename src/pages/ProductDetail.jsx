@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Sparkles, CheckCircle2, Beaker, Cl
 import ProductCard from '../components/ui/ProductCard';
 import ContactModal from '../components/modals/ContactModal';
 import productsData from '../data/products.json';
+import SEO from '../components/common/SEO';
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -60,6 +61,10 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-dark-900">
+      <SEO 
+        title={product.name} 
+        description={product.description} 
+      />
 
       {/* Hero Section */}
       <section className="relative bg-white dark:bg-dark-800 border-b border-slate-100 dark:border-white/5">

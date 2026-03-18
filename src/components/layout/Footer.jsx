@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-10 md:pt-16 pb-8 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-300 pt-10 md:pt-16 pb-12 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12 text-center md:text-left">
           
@@ -113,10 +113,10 @@ const Footer = () => {
 
         </div>
 
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div className="border-t border-slate-800 pt-8 flex flex-col items-center justify-center gap-2 text-sm text-slate-500 text-center">
           <p>&copy; {currentYear} {siteData.companyName}. All rights reserved.</p>
           <p>
-            Developed by <a href={siteData.developerLink} target="_blank" rel="noopener noreferrer" className="text-brand-400 hover:text-brand-300">Sakeeb</a>
+            Developed by <a href={siteData.developerLink} target="_blank" rel="noopener noreferrer" className="text-brand-400 hover:text-brand-300 transition-colors">Sakeeb</a>
           </p>
         </div>
       </div>

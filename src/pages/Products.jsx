@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import ProductCard from '../components/ui/ProductCard';
 import ContactModal from '../components/modals/ContactModal';
 import productsData from '../data/products.json';
+import SEO from '../components/common/SEO';
 
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -29,6 +30,10 @@ const Products = () => {
 
   return (
     <div className="pt-8 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+      <SEO 
+        title="Our Products" 
+        description="Browse our premium selection of agricultural powders, seeds, and farming tools. Quality-assured products directly from trusted farms." 
+      />
       
       {/* Title & Search header */}
       <div className="bg-brand-50 dark:bg-brand-900/10 py-10 md:py-16 mb-10 md:mb-16 border-b border-brand-100 dark:border-white/5">

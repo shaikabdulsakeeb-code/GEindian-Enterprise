@@ -3,10 +3,15 @@ import { motion } from 'framer-motion';
 import { Award, ShieldCheck } from 'lucide-react';
 import { CertificateCard } from '../components/ui/CertificateCard';
 import certificationsData from '../data/certifications.json';
+import SEO from '../components/common/SEO';
 
 const Certifications = () => {
   return (
     <div className="pt-8 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+      <SEO 
+        title="Certifications" 
+        description="Explore our certifications and quality standards. GEindian is committed to providing export-quality agricultural products that meet international guidelines." 
+      />
       
       <div className="bg-brand-50 dark:bg-brand-900/10 py-10 md:py-16 mb-10 md:mb-16 border-b border-brand-100 dark:border-white/5">
         <div className="container mx-auto px-4 md:px-6">
