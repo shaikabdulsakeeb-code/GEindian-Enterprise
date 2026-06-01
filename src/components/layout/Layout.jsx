@@ -18,6 +18,23 @@ const Layout = () => {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
     }
+
+    // Cursor tracking
+    const cursor = document.getElementById('global-cursor');
+    const ring = document.getElementById('global-cursor-ring');
+    
+    const moveCursor = (e) => {
+      if (!cursor || !ring) return;
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      setTimeout(() => {
+        ring.style.left = e.clientX + 'px';
+        ring.style.top = e.clientY + 'px';
+      }, 80);
+    };
+
+    window.addEventListener('mousemove', moveCursor);
+    return () => window.removeEventListener('mousemove', moveCursor);
   }, []);
 
   const toggleDarkMode = () => {
@@ -38,6 +55,9 @@ const Layout = () => {
 
   return (
     <div className="min-h-screen flex flex-col pt-[64px] md:pt-[100px]">
+      <div className="cursor" id="global-cursor"></div>
+      <div className="cursor-ring" id="global-cursor-ring"></div>
+      
       <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       
       <main className="flex-grow">

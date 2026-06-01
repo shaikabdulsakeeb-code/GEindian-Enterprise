@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search } from 'lucide-react';
 import ProductCard from '../components/ui/ProductCard';
 import ContactModal from '../components/modals/ContactModal';
 import productsData from '../data/products.json';
@@ -29,75 +28,77 @@ const Products = () => {
   };
 
   return (
-    <div className="pt-8 pb-24 min-h-screen bg-slate-50 dark:bg-dark-900">
+    <div className="min-h-screen bg-cream dark:bg-dark-900 pb-24">
       <SEO 
-        title="Our Products" 
+        title="Our Collection" 
         description="Browse our premium selection of agricultural powders, seeds, and farming tools. Quality-assured products directly from trusted farms." 
+        keywords="premium agricultural products catalog, organic farming seeds, top quality fertilizers India, buy agricultural powders online, export quality farming supplies"
       />
       
-      {/* Title & Search header */}
-      <div className="bg-brand-50 dark:bg-brand-900/10 py-10 md:py-16 mb-10 md:mb-16 border-b border-brand-100 dark:border-white/5">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4 md:mb-6"
-            >
-              Our Premium <span className="text-gradient">Products</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-8 md:mb-10"
-            >
-              Fresh, Quality-Assured Agricultural Powders directly from trusted farms.
-            </motion.p>
+      {/* Editorial Deep Ink Header */}
+      <section className="bg-ink text-white pt-24 pb-32 px-8 md:px-16 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full transform translate-x-1/4 -translate-y-1/4">
+             <circle cx="100" cy="100" r="90" fill="none" stroke="#eab308" strokeWidth="2" strokeDasharray="4 8"/>
+             <circle cx="100" cy="100" r="60" fill="none" stroke="#eab308" strokeWidth="1" opacity="0.5"/>
+             <circle cx="100" cy="100" r="30" fill="#eab308" opacity="0.2"/>
+           </svg>
+        </div>
 
-            {/* Search Bar */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="relative max-w-xl mx-auto"
-            >
-              <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-slate-400">
-                <Search size={22} />
+        <div className="container mx-auto max-w-5xl relative z-10 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+            className="flex justify-center items-center gap-3 text-[11px] font-medium tracking-[0.16em] uppercase text-sunflower mb-6"
+          >
+            <div className="w-6 h-[1px] bg-sunflower"></div> The Collection <div className="w-6 h-[1px] bg-sunflower"></div>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }}
+            className="font-serif text-[clamp(40px,5vw,64px)] font-light leading-[1.05] tracking-[-0.02em] mb-8"
+          >
+            Finest <em>Harvest</em><br />for Global Export.
+          </motion.h1>
+
+          {/* Search Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }}
+            className="relative max-w-xl mx-auto mt-12"
+          >
+            <div className="relative">
+              <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none text-white/40">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
               </div>
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 md:pl-14 pr-6 py-3 md:py-4 rounded-full bg-white dark:bg-dark-800 border overflow-hidden border-slate-200 dark:border-white/10 shadow-lg shadow-slate-200/50 dark:shadow-none focus:outline-none focus:ring-2 focus:ring-brand-500/50 text-slate-900 dark:text-white text-base md:text-lg transition-all"
+                className="w-full pl-14 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 focus:border-sunflower focus:bg-white/15 outline-none text-white placeholder-white/40 text-[15px] font-light tracking-wide transition-all rounded-sm"
               />
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <section className="container mx-auto px-8 md:px-16 max-w-7xl -mt-16 relative z-20">
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20">
-            <h3 className="text-2xl font-display text-slate-500 dark:text-slate-400">No products found matching "{searchTerm}"</h3>
+          <div className="bg-white dark:bg-dark-800 p-16 text-center shadow-2xl rounded-sm">
+            <h3 className="font-serif text-3xl text-ink/50 dark:text-cream/50 mb-4">Nothing found for "{searchTerm}"</h3>
             <button 
               onClick={() => setSearchTerm('')}
-              className="mt-4 text-brand-600 hover:text-brand-700 font-medium"
+              className="text-[12px] font-medium tracking-[0.08em] uppercase text-sunflower border-b border-sunflower/30 pb-1 hover:border-sunflower transition-all"
             >
-              Clear Search
+              Reset Search
             </button>
           </div>
         ) : (
-          <motion.div 
-            layout
-            className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-10"
-          >
+          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             <AnimatePresence>
-              {visibleProducts.map((product) => (
+              {visibleProducts.map((product, index) => (
                 <ProductCard 
                   key={product.id} 
                   product={product} 
+                  index={index}
                   onRequestSample={handleRequestSample} 
                 />
               ))}
@@ -106,16 +107,16 @@ const Products = () => {
         )}
 
         {filteredProducts.length > visibleCount && (
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-24">
             <button
               onClick={() => setVisibleCount(prev => prev + 6)}
-              className="px-8 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-full shadow-lg hover:shadow-brand-500/30 transition-all duration-300 transform hover:-translate-y-1"
+              className="px-10 py-4 bg-ink text-sunflower hover:bg-sunflower hover:text-ink dark:bg-white dark:text-ink font-medium tracking-[0.1em] uppercase text-[12px] rounded-sm transition-all duration-300 shadow-xl"
             >
-              Load More Products
+              Load More
             </button>
           </div>
         )}
-      </div>
+      </section>
 
       <ContactModal 
         isOpen={modalOpen} 

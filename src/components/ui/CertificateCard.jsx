@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn } from 'lucide-react';
 
 export const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-slate-900/90 backdrop-blur-md cursor-zoom-out"
+            className="absolute inset-0 bg-ink/95 backdrop-blur-sm cursor-zoom-out"
           />
           
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="relative max-w-5xl max-h-[85vh] w-full rounded-xl overflow-hidden shadow-2xl z-10"
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.4 }}
+            className="relative max-w-4xl max-h-[90vh] w-full rounded-sm overflow-hidden shadow-2xl z-10 bg-cream"
           >
             <button 
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full backdrop-blur transition-colors z-20"
+              className="absolute top-4 right-4 text-[10px] font-medium tracking-[0.14em] uppercase text-ink hover:text-sunflower transition-colors z-20 bg-white/80 px-4 py-2 rounded-sm"
             >
-              <X size={24} />
+              Close
             </button>
-            <div className="w-full h-[80vh] bg-slate-100 dark:bg-dark-800 rounded-b-xl pt-1">
+            <div className="w-full h-[85vh] p-4">
               {imageSrc.endsWith('.pdf') ? (
                 <iframe 
                   src={`${imageSrc}#toolbar=0`} 
-                  className="w-full h-full rounded-b-xl"
+                  className="w-full h-full"
                   title={imageAlt}
                 />
               ) : (
@@ -55,14 +55,11 @@ export const CertificateCard = ({ cert }) => {
   return (
     <>
       <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
         onClick={() => setIsModalOpen(true)}
-        className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300"
+        className="group relative aspect-[3/4] rounded-sm overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-ink/20 transition-all duration-500 bg-white"
       >
         {cert.image.endsWith('.pdf') ? (
-          <div className="w-full h-full relative overflow-hidden pointer-events-none bg-white">
+          <div className="w-full h-full relative overflow-hidden pointer-events-none">
             <iframe 
               loading="lazy"
               src={`${cert.image}#toolbar=0&navpanes=0&scrollbar=0&view=fitH`} 
@@ -72,24 +69,26 @@ export const CertificateCard = ({ cert }) => {
             />
           </div>
         ) : (
-          <img 
-            src={cert.image} 
-            alt={cert.name} 
-            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
-            decoding="async"
-          />
+          <div className="w-full h-full p-6">
+            <img 
+              src={cert.image} 
+              alt={cert.name} 
+              className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         )}
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 opacity-80 group-hover:opacity-100 transition-opacity">
-          <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            <h3 className="font-display font-semibold text-lg text-white mb-1">
+        <div className="absolute inset-0 bg-ink/90 flex flex-col justify-center items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+          <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <div className="w-8 h-[1px] bg-sunflower mx-auto mb-4"></div>
+            <h3 className="font-serif text-[24px] text-white leading-[1.2] mb-4">
               {cert.name}
             </h3>
-            <span className="flex items-center gap-2 text-brand-300 text-sm font-medium">
-              <ZoomIn size={16} />
-              Click to View
+            <span className="text-[10px] font-medium tracking-[0.14em] uppercase text-sunflower border-b border-sunflower/30 pb-1">
+              View Certificate
             </span>
           </div>
         </div>

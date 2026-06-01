@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, description, keywords }) => {
   useEffect(() => {
     // Update title
     const baseTitle = 'Geindian';
@@ -18,7 +18,20 @@ const SEO = ({ title, description }) => {
         document.head.appendChild(metaDescription);
       }
     }
-  }, [title, description]);
+
+    // Update meta keywords
+    if (keywords) {
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
+      } else {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.name = 'keywords';
+        metaKeywords.content = keywords;
+        document.head.appendChild(metaKeywords);
+      }
+    }
+  }, [title, description, keywords]);
 
   return null;
 };

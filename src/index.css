@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -25,14 +25,17 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 transition-colors duration-300 font-sans;
+    @apply bg-cream text-ink transition-colors duration-300 font-sans;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
+    cursor: none;
   }
   
   .dark body {
     @apply bg-dark-900 text-slate-100;
   }
+  
+
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
@@ -46,10 +49,10 @@
     @apply bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 rounded-full dark:bg-slate-700;
+    @apply bg-ink-20 rounded-full dark:bg-dark-700/80;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-brand-500 dark:bg-brand-600;
+    @apply bg-sunflower dark:bg-sunflower-dark;
   }
 }
 
@@ -69,4 +72,48 @@
 .page-transition-exit-active {
   opacity: 0;
   transition: opacity 300ms;
+}
+
+/* Custom cursor */
+.cursor {
+  width: 10px; height: 10px;
+  background: theme('colors.sunflower.DEFAULT');
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.25s ease, height 0.25s ease, background 0.25s ease;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1.5px solid theme('colors.sunflower.DEFAULT');
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: left 0.12s ease, top 0.12s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+  opacity: 0.6;
+}
+body:has(a:hover) .cursor, body:has(button:hover) .cursor { width: 18px; height: 18px; background: theme('colors.sunflower.dark'); }
+body:has(a:hover) .cursor-ring, body:has(button:hover) .cursor-ring { width: 52px; height: 52px; opacity: 0.3; }
+
+/* Hide cursor on touch devices */
+@media (pointer: coarse) {
+  .cursor, .cursor-ring {
+    display: none !important;
+  }
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Hide Google Translate Top Banner */
+.skiptranslate iframe, .goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+#google_translate_element {
+  display: none !important;
 }

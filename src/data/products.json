@@ -13,13 +13,20 @@
       "Acts as a natural detoxifier",
       "Aids in digestion and metabolism"
     ],
-    "usage": ["Smoothies & juices", "Face masks & hair packs", "Herbal teas", "Baking & cooking", "Dietary supplements"],
+    "usage": [
+      "Smoothies & juices",
+      "Face masks & hair packs",
+      "Herbal teas",
+      "Baking & cooking",
+      "Dietary supplements"
+    ],
     "specifications": {
       "Storage": "Cool, dry place away from sunlight",
       "Origin": "India",
       "Type": "100% Natural, No additives",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "Best Seller"
   },
   {
     "id": "banana-powder",
@@ -35,13 +42,20 @@
       "Supports heart health and digestion",
       "Gluten-free and allergen-friendly"
     ],
-    "usage": ["Baby food formulations", "Smoothies & shakes", "Baking & pastries", "Ice cream & desserts", "Cereal mixes"],
+    "usage": [
+      "Baby food formulations",
+      "Smoothies & shakes",
+      "Baking & pastries",
+      "Ice cream & desserts",
+      "Cereal mixes"
+    ],
     "specifications": {
       "Storage": "Store in an airtight container in a cool, dry place",
       "Origin": "India",
       "Type": "100% Natural, No preservatives",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "Best Seller"
   },
   {
     "id": "coriander-powder",
@@ -57,13 +71,20 @@
       "Natural anti-inflammatory properties",
       "Enhances flavor without artificial additives"
     ],
-    "usage": ["Curries & gravies", "Soups & stews", "Marinades & rubs", "Spice blends", "Chutneys & sauces"],
+    "usage": [
+      "Curries & gravies",
+      "Soups & stews",
+      "Marinades & rubs",
+      "Spice blends",
+      "Chutneys & sauces"
+    ],
     "specifications": {
       "Storage": "Airtight container, cool & dry place",
       "Origin": "India",
       "Type": "100% Pure Ground Coriander",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "New Arrival"
   },
   {
     "id": "ginger-powder",
@@ -79,13 +100,20 @@
       "Rich in gingerol — a potent bioactive compound",
       "Supports cardiovascular health"
     ],
-    "usage": ["Teas & warm beverages", "Curries & stir-fries", "Baking (gingerbread, cookies)", "Herbal remedies", "Salad dressings & marinades"],
+    "usage": [
+      "Teas & warm beverages",
+      "Curries & stir-fries",
+      "Baking (gingerbread, cookies)",
+      "Herbal remedies",
+      "Salad dressings & marinades"
+    ],
     "specifications": {
       "Storage": "Cool, dry place in a sealed container",
       "Origin": "India",
       "Type": "100% Natural Dried Ginger",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "Best Seller"
   },
   {
     "id": "green-chilli-powder",
@@ -101,13 +129,20 @@
       "Enhances flavor with authentic green chilli heat",
       "Retains natural color with no artificial dyes"
     ],
-    "usage": ["Curries & sabzis", "Chutneys & pickles", "Snack seasonings", "Instant noodles & soups", "Marinades"],
+    "usage": [
+      "Curries & sabzis",
+      "Chutneys & pickles",
+      "Snack seasonings",
+      "Instant noodles & soups",
+      "Marinades"
+    ],
     "specifications": {
       "Storage": "Cool, dry, dark place",
       "Origin": "India",
       "Type": "100% Dehydrated Green Chilli",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "New Arrival"
   },
   {
     "id": "mango-powder",
@@ -123,13 +158,20 @@
       "Supports skin health and glow",
       "Contains iron and other essential minerals"
     ],
-    "usage": ["Chaats & street food", "Curries & dals", "Smoothie bowls", "Spice blends & marinades", "Pickles & preserves"],
+    "usage": [
+      "Chaats & street food",
+      "Curries & dals",
+      "Smoothie bowls",
+      "Spice blends & marinades",
+      "Pickles & preserves"
+    ],
     "specifications": {
       "Storage": "Airtight container, away from moisture",
       "Origin": "India",
       "Type": "100% Natural Amchur (Dried Mango)",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "Best Seller"
   },
   {
     "id": "tomato-powder",
@@ -145,13 +187,20 @@
       "Low-calorie, nutrient-dense ingredient",
       "No artificial colors or preservatives"
     ],
-    "usage": ["Soups & broths", "Pasta sauces & pizza bases", "Seasoning mixes", "Instant food formulations", "Dips & spreads"],
+    "usage": [
+      "Soups & broths",
+      "Pasta sauces & pizza bases",
+      "Seasoning mixes",
+      "Instant food formulations",
+      "Dips & spreads"
+    ],
     "specifications": {
       "Storage": "Cool, dry place in sealed packaging",
       "Origin": "India",
       "Type": "100% Spray-Dried Tomato",
       "Certification": "FSSAI Certified"
-    }
+    },
+    "tag": "New Arrival"
   },
   {
     "id": "beetroot-powder",
@@ -167,7 +216,13 @@
       "Excellent natural food colorant (deep pink/red)",
       "Boosts energy and athletic performance"
     ],
-    "usage": ["Pre-workout drinks", "Smoothies & juices", "Natural food coloring", "Pasta & noodle dough", "Face masks & skincare"],
+    "usage": [
+      "Pre-workout drinks",
+      "Smoothies & juices",
+      "Natural food coloring",
+      "Pasta & noodle dough",
+      "Face masks & skincare"
+    ],
     "specifications": {
       "Storage": "Airtight container, cool & dark place",
       "Origin": "India",
@@ -189,7 +244,13 @@
       "Supports gut health and digestion",
       "Versatile tropical flavor for diverse recipes"
     ],
-    "usage": ["Smoothies & milkshakes", "Baking & desserts", "Baby food", "Ice cream & yogurt mixes", "Energy bars & snacks"],
+    "usage": [
+      "Smoothies & milkshakes",
+      "Baking & desserts",
+      "Baby food",
+      "Ice cream & yogurt mixes",
+      "Energy bars & snacks"
+    ],
     "specifications": {
       "Storage": "Cool, dry place, sealed container",
       "Origin": "South India",
@@ -211,7 +272,13 @@
       "Powerful anti-inflammatory and antioxidant",
       "Supports energy levels and reduces fatigue"
     ],
-    "usage": ["Green smoothies & juices", "Health supplements & capsules", "Tea & lattes", "Soups & salads", "Skincare formulations"],
+    "usage": [
+      "Green smoothies & juices",
+      "Health supplements & capsules",
+      "Tea & lattes",
+      "Soups & salads",
+      "Skincare formulations"
+    ],
     "specifications": {
       "Storage": "Airtight container away from sunlight",
       "Origin": "India",
@@ -233,7 +300,13 @@
       "Adds deep umami flavor to dishes",
       "Convenient alternative to fresh onions"
     ],
-    "usage": ["Seasoning mixes & rubs", "Gravies & sauces", "Burger patties & meatballs", "Dips & dressings", "Instant food products"],
+    "usage": [
+      "Seasoning mixes & rubs",
+      "Gravies & sauces",
+      "Burger patties & meatballs",
+      "Dips & dressings",
+      "Instant food products"
+    ],
     "specifications": {
       "Storage": "Cool, dry, airtight container",
       "Origin": "India",
@@ -255,7 +328,13 @@
       "Natural green food colorant",
       "Promotes eye health with lutein and zeaxanthin"
     ],
-    "usage": ["Green smoothies & juices", "Pasta dough & bread", "Soups & curries", "Baby food", "Natural food coloring"],
+    "usage": [
+      "Green smoothies & juices",
+      "Pasta dough & bread",
+      "Soups & curries",
+      "Baby food",
+      "Natural food coloring"
+    ],
     "specifications": {
       "Storage": "Sealed container, cool & dry place",
       "Origin": "India",
@@ -277,7 +356,13 @@
       "Natural pink/red color for food and cosmetics",
       "Delicious natural flavor with no added sugar"
     ],
-    "usage": ["Smoothies & milkshakes", "Cakes, cookies & pastries", "Ice cream & frozen desserts", "Yogurt & cereal toppings", "Skincare & lip products"],
+    "usage": [
+      "Smoothies & milkshakes",
+      "Cakes, cookies & pastries",
+      "Ice cream & frozen desserts",
+      "Yogurt & cereal toppings",
+      "Skincare & lip products"
+    ],
     "specifications": {
       "Storage": "Cool, dry place in sealed packaging",
       "Origin": "India",

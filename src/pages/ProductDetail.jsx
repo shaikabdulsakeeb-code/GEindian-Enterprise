@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ChevronRight, Sparkles, CheckCircle2, Beaker, ClipboardList, Leaf } from 'lucide-react';
 import ProductCard from '../components/ui/ProductCard';
 import ContactModal from '../components/modals/ContactModal';
 import productsData from '../data/products.json';
@@ -10,11 +9,11 @@ import SEO from '../components/common/SEO';
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.6 }
 };
 
 const stagger = {
-  animate: { transition: { staggerChildren: 0.08 } }
+  animate: { transition: { staggerChildren: 0.1 } }
 };
 
 const ProductDetail = () => {
@@ -28,31 +27,17 @@ const ProductDetail = () => {
     ? productsData.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3)
     : [];
 
-  const handleRequestSample = (productName) => {
+  const handleRequestSample = () => {
     setModalOpen(true);
   };
 
   if (!product) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-dark-900 pt-20 px-4">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-center"
-        >
-          <div className="w-24 h-24 mx-auto mb-6 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
-            <span className="text-4xl">🔍</span>
-          </div>
-          <h1 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-4">Product Not Found</h1>
-          <p className="text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto">
-            The product you're looking for doesn't exist or may have been removed.
-          </p>
-          <Link 
-            to="/products"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-brand-500/30"
-          >
-            <ArrowLeft size={18} />
-            Back to Products
+      <div className="min-h-screen flex flex-col items-center justify-center bg-cream dark:bg-dark-900 pt-20 px-4">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
+          <h1 className="font-serif text-5xl text-ink dark:text-white mb-4">Product Not Found</h1>
+          <Link to="/products" className="text-[12px] font-medium tracking-[0.08em] uppercase text-sunflower border-b border-sunflower/30 pb-1 hover:border-sunflower transition-all">
+            Back to Collection
           </Link>
         </motion.div>
       </div>
@@ -60,112 +45,79 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-dark-900">
+    <div className="min-h-screen bg-cream dark:bg-dark-900 pb-24">
       <SEO 
         title={product.name} 
         description={product.description} 
+        keywords={`${product.name}, ${product.category}, premium agriculture export, buy ${product.name.toLowerCase()}, Indian farming products`}
       />
 
       {/* Hero Section */}
-      <section className="relative bg-white dark:bg-dark-800 border-b border-slate-100 dark:border-white/5">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[60%] bg-brand-400/10 dark:bg-brand-600/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[50%] bg-green-300/10 dark:bg-green-600/10 rounded-full blur-[100px]" />
-        </div>
-
-        <div className="container mx-auto px-4 md:px-6 pt-8 pb-12 md:pt-12 md:pb-16 relative z-10">
+      <section className="bg-white dark:bg-dark-800 pt-24 pb-24 md:pt-32 md:pb-32 px-8 md:px-16 border-b border-ink/5 dark:border-white/5">
+        <div className="container mx-auto max-w-7xl">
+          
           {/* Breadcrumbs */}
           <motion.nav 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-8 md:mb-12"
+            initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 text-[10px] font-medium tracking-[0.14em] uppercase text-ink/40 dark:text-cream/40 mb-12"
           >
-            <Link to="/" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Home</Link>
-            <ChevronRight size={14} />
-            <Link to="/products" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Products</Link>
-            <ChevronRight size={14} />
-            <span className="text-slate-900 dark:text-white font-medium">{product.name}</span>
+            <Link to="/" className="hover:text-sunflower transition-colors">Home</Link>
+            <span className="w-1 h-1 bg-sunflower rounded-full"></span>
+            <Link to="/products" className="hover:text-sunflower transition-colors">Collection</Link>
+            <span className="w-1 h-1 bg-sunflower rounded-full"></span>
+            <span className="text-ink dark:text-white">{product.name}</span>
           </motion.nav>
 
-          {/* Product Hero Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="relative group"
-            >
-              <div className="absolute -inset-3 bg-gradient-to-br from-brand-200/50 to-green-200/50 dark:from-brand-800/30 dark:to-green-800/30 rounded-[2rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden bg-white dark:bg-dark-900 shadow-2xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+            {/* Image display */}
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative">
+              <div className="aspect-square bg-cream-deep dark:bg-dark-900 rounded-sm overflow-hidden flex items-center justify-center p-8 relative">
+                <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
+                  <svg viewBox="0 0 200 200" className="w-[80%] h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#eab308" strokeWidth="1" strokeDasharray="4 4"/>
+                  </svg>
+                </div>
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover relative z-10 mix-blend-multiply dark:mix-blend-normal transform transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 md:top-6 md:left-6">
-                  <span className="px-4 py-1.5 bg-white/90 dark:bg-dark-900/90 backdrop-blur-sm rounded-full text-sm font-medium text-brand-700 dark:text-brand-300 border border-brand-100 dark:border-brand-800/50">
-                    {product.category}
-                  </span>
-                </div>
+                <span className="absolute top-6 left-6 bg-ink text-white text-[10px] font-medium tracking-[0.1em] uppercase px-4 py-2 rounded-sm z-20">
+                  {product.category}
+                </span>
               </div>
             </motion.div>
 
-            {/* Info */}
-            <motion.div {...fadeUp} className="space-y-6 md:space-y-8">
+            {/* Product Info */}
+            <motion.div {...fadeUp} className="space-y-8 md:space-y-12">
               <div>
                 <motion.h1 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4"
+                  initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+                  className="font-serif text-[clamp(40px,5vw,56px)] font-light leading-[1.1] text-ink dark:text-white mb-6"
                 >
                   {product.name}
                 </motion.h1>
                 <motion.p 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                  className="text-[16px] font-light leading-[1.8] text-ink/70 dark:text-cream/70"
                 >
                   {product.longDescription}
                 </motion.p>
               </div>
 
-              {/* Quick Benefits Preview */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="space-y-3"
-              >
-                {product.benefits.slice(0, 3).map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={20} className="text-brand-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700 dark:text-slate-300">{benefit}</span>
-                  </div>
-                ))}
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 pt-2"
-              >
+              {/* Action Buttons */}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex gap-4">
                 <button 
                   onClick={() => setModalOpen(true)}
-                  className="px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-brand-500/30 flex items-center justify-center gap-2 group text-base"
+                  className="px-10 py-4 bg-ink text-sunflower hover:bg-sunflower hover:text-ink dark:bg-cream dark:text-ink font-medium tracking-[0.1em] uppercase text-[12px] rounded-sm transition-all duration-300 shadow-xl flex-1 text-center"
                 >
-                  <Sparkles size={20} />
-                  Request Free Sample
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  Request Sample
                 </button>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 bg-white dark:bg-dark-900 hover:bg-slate-50 dark:hover:bg-dark-700 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10 rounded-xl font-medium transition-all flex items-center justify-center text-base"
+                  className="px-10 py-4 border border-ink/20 dark:border-white/20 text-ink dark:text-white hover:border-sunflower hover:text-sunflower font-medium tracking-[0.1em] uppercase text-[12px] rounded-sm transition-all duration-300 flex-1 text-center flex justify-center items-center"
                 >
-                  Contact for Bulk Orders
+                  Bulk Orders
                 </Link>
               </motion.div>
             </motion.div>
@@ -174,103 +126,51 @@ const ProductDetail = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-slate-50 dark:bg-dark-900">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-300 font-medium text-sm mb-4">
-              <Leaf size={16} />
-              Why Choose This Product
-            </div>
-            <h2 className="text-2xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">
-              Key Benefits
-            </h2>
+      <section className="py-24 px-8 md:px-16 bg-cream dark:bg-dark-900">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className="font-serif text-[32px] md:text-[40px] text-ink dark:text-white">The <em>Advantages</em></h2>
+            <div className="w-12 h-[1px] bg-sunflower mx-auto mt-6"></div>
           </motion.div>
 
-          <motion.div 
-            variants={stagger}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-          >
+          <motion.div variants={stagger} initial="initial" whileInView="animate" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {product.benefits.map((benefit, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                className="group glass p-6 rounded-2xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 dark:border-white/5"
-              >
-                <div className="w-10 h-10 bg-brand-100 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <CheckCircle2 size={20} />
+              <motion.div key={i} variants={fadeUp} className="bg-white dark:bg-dark-800 p-10 rounded-sm border border-ink/5 dark:border-white/5 shadow-sm hover:-translate-y-1 transition-transform duration-300 group">
+                <div className="w-12 h-12 rounded-full border border-sunflower/30 flex items-center justify-center text-sunflower mb-6 group-hover:bg-sunflower group-hover:text-ink transition-colors">
+                  <span className="text-xl">☘</span>
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 font-medium">{benefit}</p>
+                <p className="text-[15px] font-light leading-[1.6] text-ink/80 dark:text-cream/80">{benefit}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Usage & Specifications */}
-      <section className="py-16 md:py-24 bg-white dark:bg-dark-800">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto">
+      {/* Specifications */}
+      <section className="py-24 px-8 md:px-16 bg-white dark:bg-dark-800">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
             
-            {/* Usage Suggestions */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center">
-                  <Beaker size={20} />
-                </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white">How to Use</h3>
-              </div>
+            {/* Usage */}
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h3 className="font-serif text-[28px] text-ink dark:text-white mb-8">Recommended <em>Usage</em></h3>
               <div className="flex flex-wrap gap-3">
                 {product.usage.map((use, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="px-4 py-2.5 bg-slate-50 dark:bg-dark-900 border border-slate-200 dark:border-white/10 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 dark:hover:bg-brand-900/20 dark:hover:border-brand-700 dark:hover:text-brand-300 transition-all cursor-default"
-                  >
+                  <span key={i} className="px-6 py-3 bg-cream dark:bg-dark-900 border border-ink/10 dark:border-white/10 text-[13px] tracking-[0.05em] text-ink/70 dark:text-cream/70 rounded-sm">
                     {use}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
             </motion.div>
 
-            {/* Specifications */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-xl flex items-center justify-center">
-                  <ClipboardList size={20} />
-                </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white">Specifications</h3>
-              </div>
-              <div className="bg-slate-50 dark:bg-dark-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5">
+            {/* Details */}
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h3 className="font-serif text-[28px] text-ink dark:text-white mb-8">Product <em>Details</em></h3>
+              <div className="bg-cream dark:bg-dark-900 p-8 rounded-sm border border-ink/10 dark:border-white/10">
                 {Object.entries(product.specifications).map(([key, value], i) => (
-                  <div
-                    key={key}
-                    className={`flex items-center justify-between px-6 py-4 ${
-                      i !== Object.entries(product.specifications).length - 1
-                        ? 'border-b border-slate-100 dark:border-white/5'
-                        : ''
-                    }`}
-                  >
-                    <span className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">{key}</span>
-                    <span className="text-slate-900 dark:text-white font-medium text-sm">{value}</span>
+                  <div key={key} className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 ${i !== 0 ? 'border-t border-ink/10 dark:border-white/10' : ''}`}>
+                    <span className="text-[11px] font-medium tracking-[0.14em] uppercase text-ink/50 dark:text-cream/50 mb-1 sm:mb-0">{key}</span>
+                    <span className="text-[14px] text-ink dark:text-white">{value}</span>
                   </div>
                 ))}
               </div>
@@ -279,29 +179,19 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      {/* Big CTA Banner */}
-      <section className="py-16 md:py-20 bg-slate-50 dark:bg-dark-900">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center glass p-8 md:p-16 rounded-[2rem] relative overflow-hidden shadow-xl"
-          >
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-400 via-green-400 to-brand-500" />
-            <Sparkles size={40} className="mx-auto text-brand-500 mb-4" />
-            <h2 className="text-2xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
-              Interested in {product.name}?
+      {/* Luxurious CTA */}
+      <section className="py-24 px-8 md:px-16">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-ink text-white p-12 md:p-24 rounded-sm text-center relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at center, #eab308 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+            <h2 className="font-serif text-[32px] md:text-[48px] font-light leading-[1.1] mb-6 relative z-10">
+              Experience the <em>Purity</em>.
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-xl mx-auto">
-              Get a free sample delivered to your doorstep. Experience the premium quality before placing a bulk order.
+            <p className="text-[15px] font-light leading-[1.8] text-white/70 max-w-xl mx-auto mb-10 relative z-10">
+              Get a free sample delivered to your doorstep. Experience the premium quality of our {product.name} before placing a bulk order.
             </p>
-            <button
-              onClick={() => setModalOpen(true)}
-              className="px-10 py-4 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-medium text-lg transition-all hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-1 inline-flex items-center gap-3 group"
-            >
-              Request Free Sample
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            <button onClick={() => setModalOpen(true)} className="px-10 py-4 bg-sunflower text-ink hover:bg-white transition-colors font-medium tracking-[0.1em] uppercase text-[12px] rounded-sm relative z-10 shadow-xl">
+              Request Your Sample
             </button>
           </motion.div>
         </div>
@@ -309,48 +199,37 @@ const ProductDetail = () => {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="py-16 md:py-24 bg-white dark:bg-dark-800 border-t border-slate-100 dark:border-white/5">
-          <div className="container mx-auto px-4 md:px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-brand-600 dark:text-brand-400 font-medium tracking-wider uppercase text-sm mb-3">You May Also Like</h2>
-              <h3 className="font-display font-bold text-2xl md:text-4xl text-slate-900 dark:text-white">
-                Related Products
-              </h3>
-            </motion.div>
+        <section className="py-24 px-8 md:px-16 bg-cream-deep dark:bg-dark-800 border-t border-ink/5 dark:border-white/5">
+          <div className="container mx-auto max-w-7xl">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <div>
+                <div className="flex items-center gap-3 text-[11px] font-medium tracking-[0.16em] uppercase text-brand-600 mb-4">
+                  <div className="w-6 h-[1px] bg-brand-600"></div> Discover More
+                </div>
+                <h3 className="font-serif text-[36px] text-ink dark:text-white">Related <em>Products</em></h3>
+              </div>
+              <Link to="/products" className="text-[12px] font-medium tracking-[0.08em] uppercase text-sunflower border-b border-sunflower/30 pb-1 hover:border-sunflower transition-all">
+                View Collection
+              </Link>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-              {relatedProducts.map(rp => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedProducts.map((rp, index) => (
                 <ProductCard 
                   key={rp.id} 
                   product={rp} 
-                  onRequestSample={handleRequestSample}
+                  index={index}
+                  onRequestSample={() => {
+                    setModalOpen(true);
+                  }}
                 />
               ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Link 
-                to="/products"
-                className="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 transition-colors group"
-              >
-                View All Products
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
           </div>
         </section>
       )}
 
-      <ContactModal 
-        isOpen={modalOpen} 
-        onClose={() => setModalOpen(false)} 
-        productName={product.name} 
-      />
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} productName={product.name} />
     </div>
   );
 };
