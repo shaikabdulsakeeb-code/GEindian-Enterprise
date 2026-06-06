@@ -124,7 +124,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className="overflow-hidden rounded-lg w-10 h-10 group-hover:scale-105 transition-transform duration-300">
-             <img src="/images/logo-title.png" alt="GE Enterprise Logo" fetchpriority="high" className="w-full h-full object-cover" />
+             <img src="/images/logo-title.webp" alt="GE Enterprise Logo" fetchpriority="high" className="w-full h-full object-cover" />
           </div>
           <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">
             GE <span className="text-brand-600 dark:text-brand-400">Enterprise</span>
